@@ -1,0 +1,89 @@
+@model EadProject.Models.Employee
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="EN" lang="EN" dir="ltr">
+<head profile="http://gmpg.org/xfn/11">
+<title>PlusBusiness | Full Width</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<meta http-equiv="imagetoolbar" content="no" />
+<link rel="stylesheet" href="~/Content/layout.css" type="text/css" />
+</head>
+<body id="top">
+    <h2>Subordinates</h2>
+<label><strong>Search</strong></label>
+
+    <form method="post" action="Search">
+<input type="text" name="t1"/>
+    <br/>
+    <input type="submit" value="Search"/>
+</form>
+
+    @*<table>
+            <tr>
+                <td>ID</td>
+                <td>Name</td>
+                <td>Job</td>
+                <td>Manager NO</td>
+                <td>Salary</td>
+                <td>Heigher Date</td>
+                <td>Leaving Date</td>
+                <td>Project</td>
+                <td>Commision</td>
+            </tr>
+
+                @foreach (var v in ViewBag.Employee)
+                {
+                    <tr>
+                    <td>@v.EmpId</td>
+                    <td>@v.EmpName</td>
+                    <td>@v.Job</td>
+                    <td>@v.ManagerNo</td>
+                    <td>@v.Salary</td>
+                    <td>@v.H_date</td>
+                    <td>@v.L_date</td>
+                    <td>@v.ProjectId</td>
+                    <td>@v.Commision</td>
+                    <td>
+                        @Html.ActionLink("Edit", "Edit", new {  id=v.EmpId  }) |
+                        @Html.ActionLink("Details", "Details", new {  id=v.EmpId  }) |
+                        @Html.ActionLink("Delete", "Delete", new {  id=v.EmpId  })
+                    </td> 
+                    </tr>
+                }
+            
+        </table>*@
+<!-- ####################################################################################################### -->
+  <div id="container">
+      <div class="ja-typo-legend legend-rounded legend-1">
+          <table>
+<tbody>
+@foreach(var v in ViewBag.Employee)
+{ 
+<tr>
+<td align="center"><img src="~/Images/avatar.gif" border="0" alt="" /></td>
+    <td>
+<p align="left">
+    <p><strong>ID:</strong>@v.EmpId</p>
+    <p><strong>Name:</strong>@v.EmpName</p>
+    <p><strong>Job:</strong>@v.Job</p>
+    <p><strong>Manager NO:</strong>@v.ManagerNo</p>
+
+<p><strong>Salary:</strong>@v.Salary</p>
+    <p><strong>Hier Date:</strong>@v.H_date</p>
+<p><strong>Leaving Date</strong>@v.L_date</p>
+                <p><strong>Commision:</strong>@v.Commision</p>
+
+    <p><strong>Project:</strong>@v.ProjectId</p>
+<p>__________________________________________________________________________________________________________________</p>
+    </td>
+</tr>
+}
+</tbody>
+</table>
+</div>
+      </div>
+    </body>
+    </html>

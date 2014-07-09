@@ -1,0 +1,115 @@
+@{
+    Layout = null;
+}
+
+@*<link href=@Url.Content("../../Content/layout.css")  rel="stylesheet" >*@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="EN" lang="EN" dir="ltr">
+<head>
+<title>Organization Manaement</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<meta http-equiv="imagetoolbar" content="no" />
+<link rel="stylesheet" href="~/Content/layout.css" type="text/css" />
+<script type="text/javascript" src="scripts/jquery-1.4.1.min.js"></script>
+<script type="text/javascript" src="scripts/jquery.jcarousel.pack.js"></script>
+<script type="text/javascript" src="scripts/jquery.jcarousel.setup.js"></script>
+</head>
+
+    <body  id="top" style="background-repeat:no-repeat ; background-size:cover; background-image:url('../../Images/images (2).jpg')">
+<!-- ####################################################################################################### -->
+<div class="wrapper col1">
+  <div id="header">
+    <div id="logo">
+      <h1><a href="#">organization management</a></h1>
+    </div>
+      <h1 style="float:right"><a href="../../Admin/Logout">logout</a></h1>
+    <div id="topnav">
+      <ul>
+        <li><a href="/Admin/Index">Home</a></li>
+        <li><a href="/Annoucement/Index">Annoucements</a></li>
+        <li><a href="/Admin/Subordinates">Subordinates</a></li>
+        <li><a href="/Project/Index">Projects</a></li>
+        <li><a href="/HRM/Index">HR Management</a></li>
+      </ul>
+    </div>
+    <br class="clear" />
+  </div>
+</div>
+<!-- ####################################################################################################### -->
+@*<div class="wrapper col2">
+  <div id="featured_slide">
+    <div id="featured_content">
+      <ul>
+        <li><img src="~/Images/Fotolia_11827389_S.jpg" alt="" />
+          <div class="floater">
+            <h2>About The Company !</h2>
+            <p>This is a W3C standards compliant free website template from <a href="http://www.os-templates.com/">OS Templates</a>. This template is distributed using a <a href="http://www.os-templates.com/template-terms">Website Template Licence</a>, which allows you to use and modify the template for both personal and commercial use when you keep the provided credit links in the footer. For more CSS templates visit <a href="http://www.os-templates.com/">Free Website Templates</a>.</p>
+            <p class="readmore"><a href="#">Continue Reading &raquo;</a></p>
+          </div>
+        </li>
+        <li><img src="~/Images/2.gif" alt="" />
+          <div class="floater">
+            <h2>Cursus penati saccum ut curabitur nulla.</h2>
+            <p>Temperinte interdum sempus odio urna eget curabitur semper convallis nunc laoreet. Nullain convallis ris elis vest liberos nis diculis feugiat in rutrum. Suspendreristibulumfaucibulum lobortor quis tortortor ris sapien sce enim et volutpat sus. Urnaretiumorci orci fauctor leo justo nulla cras ridiculum&hellip;</p>
+            <p class="readmore"><a href="#">Continue Reading &raquo;</a></p>
+          </div>
+        </li>
+        <li><img src="~/Images/3.gif" alt="" />
+          <div class="floater">
+            <h2>Cursus penati saccum ut curabitur nulla.</h2>
+            <p>Temperinte interdum sempus odio urna eget curabitur semper convallis nunc laoreet. Nullain convallis ris elis vest liberos nis diculis feugiat in rutrum. Suspendreristibulumfaucibulum lobortor quis tortortor ris sapien sce enim et volutpat sus. Urnaretiumorci orci fauctor leo justo nulla cras ridiculum&hellip;</p>
+            <p class="readmore"><a href="#">Continue Reading &raquo;</a></p>
+          </div>
+        </li>
+      </ul>
+    </div>
+    <a href="javascript:void(0);" id="featured-item-prev"><img src="~/Images/prev.png" alt="" /></a>
+    <a href="javascript:void(0);" id="featured-item-next"><img src="~/Images/next.png" alt="" /></a> 
+  </div>
+</div>*@
+<!-- ####################################################################################################### -->
+@*<div class="wrapper col3">
+  <div id="container">
+    <div class="homepage">*@
+      
+        @RenderBody()
+
+      @*<br class="clear" />
+    </div>
+  </div>
+</div>*@
+<!-- ####################################################################################################### -->
+@*<div class="wrapper col4">
+  <div id="footer">
+    <div class="box1">
+      <h2>A Little Company Information !</h2>
+      <img class="imgl" src="~/Images/imgl.gif" alt="" />
+      <p>Morbitincidunt maurisque eros molest nunc anteget sed vel lacus mus semper. Anterdumnullam interdum eros dui urna consequam ac nisl nullam ligula vestassa. Condimentumfelis et amet tellent quisquet a leo lacus nec augue</p>
+      <p>Portortornec condimenterdum eget consectetuer condis.</p>
+    </div>
+    <div class="box contactdetails">
+      <h2>Our Contact Details !</h2>
+      <ul>
+        <li>Company Name</li>
+        <li>Street Name &amp; Number</li>
+        <li>Town</li>
+        <li>Postcode/Zip</li>
+        <li>Tel: xxxxx xxxxxxxxxx</li>
+        <li>Fax: xxxxx xxxxxxxxxx</li>
+        <li>Email: info@domain.com</li>
+        <li class="last">LinkedIn: <a href="#">Company Profile</a></li>
+      </ul>
+    </div>
+    <br class="clear" />
+  </div>
+</div>*@
+<!-- ####################################################################################################### -->
+<div class="wrapper col5">
+  <div id="copyright">
+    <p class="fl_left">Copyright &copy; 2011 - All Rights Reserved - <a href="#">Hassan </a></p>
+    
+    <br class="clear" />
+  </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,37 @@
+﻿@model EadProject.Models.Annoucement
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>Annoucement</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Statement)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Statement)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Date)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Date)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Project.ProjectName)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Project.ProjectName)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

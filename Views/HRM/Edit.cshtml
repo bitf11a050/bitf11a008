@@ -1,0 +1,96 @@
+﻿@model EadProject.Models.Employee
+
+@{
+    ViewBag.Title = "Edit";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Edit</h2>
+
+@using (Html.BeginForm()) {
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        <legend>Employee</legend>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.EmpId)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.EmpId)
+            @Html.ValidationMessageFor(model => model.EmpId)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.EmpName)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.EmpName)
+            @Html.ValidationMessageFor(model => model.EmpName)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.ManagerNo)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.ManagerNo)
+            @Html.ValidationMessageFor(model => model.ManagerNo)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Job)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Job)
+            @Html.ValidationMessageFor(model => model.Job)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.H_date)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.H_date)
+            @Html.ValidationMessageFor(model => model.H_date)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.L_date)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.L_date)
+            @Html.ValidationMessageFor(model => model.L_date)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Salary)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Salary)
+            @Html.ValidationMessageFor(model => model.Salary)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Commision)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Commision)
+            @Html.ValidationMessageFor(model => model.Commision)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.ProjectId, "Project")
+        </div>
+        <div class="editor-field">
+            @Html.DropDownList("ProjectId", String.Empty)
+            @Html.ValidationMessageFor(model => model.ProjectId)
+        </div>
+
+        <p>
+            <input type="submit" value="Save" />
+        </p>
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>

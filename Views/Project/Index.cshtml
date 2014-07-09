@@ -1,0 +1,93 @@
+﻿@model IEnumerable<EadProject.Models.Project>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Projects</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+@*<table>
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.ProjectId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ProjectName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.S_date)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.E_date)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Status)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Discription)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.ProjectId)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ProjectName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.S_date)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.E_date)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Status)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Discription)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.ProjectId }) |
+            @Html.ActionLink("Details", "Details", new { id=item.ProjectId }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.ProjectId })
+        </td>
+    </tr>
+}*@
+
+</table>
+<div id="container">
+      <div class="ja-typo-legend legend-rounded legend-1">
+          <p><strong>Annoucements</strong></p>
+          <table>
+<tbody>
+@foreach(var v in Model)
+{ 
+<tr>
+<td align="center"><img src="~/Images/avatar.gif" border="0" alt="" /></td>
+    <td>
+<p align="left">
+    <p><strong>Project Id:</strong>@v.ProjectId</p>
+    <p><strong>Project Name:</strong>@v.ProjectName</p>
+    <p><strong>Starting Date:</strong>@v.S_date</p>
+        <p><strong>Ending Date:</strong>@v.E_date</p>
+        <p><strong>Status:</strong>@v.Status</p>
+        <p><strong>Discription:</strong>@v.Discription</p>
+
+        @Html.ActionLink("Edit", "Edit", new { id=v.ProjectId}) |
+            @Html.ActionLink("Details", "Details", new { id=v.ProjectId }) |
+            @Html.ActionLink("Delete", "Delete", new { id=v.ProjectId })
+<p>__________________________________________________________________________________________________________________</p>
+    </td>
+</tr>
+}
+</tbody>
+</table>
+</div>
+      </div>

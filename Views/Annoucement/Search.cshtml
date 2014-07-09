@@ -1,0 +1,58 @@
+﻿@{
+    ViewBag.Title = "Search";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<html>
+    <body>
+        @*<table>
+            <tr>
+                <td>Statement</td>
+                <td>Date</td>
+                <td>Related Project</td>
+            </tr>
+
+                @foreach (var v in ViewBag.Annoucement)
+                {
+                    <tr>
+                    <td>@v.Statement</td>
+                    <td>@v.Date</td>
+                    <td>@v.ProjectId</td>
+                    <td>
+                        @Html.ActionLink("Edit", "Edit", new {  id=v.Id  })|
+                        @Html.ActionLink("Details", "Details", new {  id=v.Id  }) |
+                        @Html.ActionLink("Delete", "Delete", new {  id=v.Id  })
+                    </td> 
+                    </tr>
+                }
+            
+        </table>*@
+          <div id="container">
+      <div class="ja-typo-legend legend-rounded legend-1">
+          <p><strong>Annoucements</strong></p>
+          <table>
+<tbody>
+@foreach(var v in ViewBag.Annoucement)
+{ 
+<tr>
+<td align="center"><img src="~/Images/avatar.gif" border="0" alt="" /></td>
+    <td>
+<p align="left">
+    <p><strong>Statement</strong></p>
+<p>@v.Statement</p>
+    <p><strong>Date</strong></p>
+<p>@v.Date</p>
+    <p><strong>Under Project</strong></p>
+<p>@v.ProjectId</p>
+        @Html.ActionLink("Edit", "Edit", new { id=v.Id }) |
+            @Html.ActionLink("Delete", "Delete", new { id=v.Id })
+<p>__________________________________________________________________________________________________________________</p>
+    </td>
+</tr>
+}
+    @Html.ActionLink("Back to List", "Index")
+</tbody>
+</table>
+</div>
+      </div>
+    </body>
+</html>

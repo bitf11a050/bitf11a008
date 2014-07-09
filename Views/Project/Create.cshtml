@@ -1,0 +1,72 @@
+﻿@model EadProject.Models.Project
+
+@{
+    ViewBag.Title = "Create";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Create</h2>
+
+@using (Html.BeginForm()) {
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        <legend>Project</legend>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.ProjectId)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.ProjectId)
+            @Html.ValidationMessageFor(model => model.ProjectId)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.ProjectName)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.ProjectName)
+            @Html.ValidationMessageFor(model => model.ProjectName)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.S_date)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.S_date)
+            @Html.ValidationMessageFor(model => model.S_date)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.E_date)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.E_date)
+            @Html.ValidationMessageFor(model => model.E_date)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Status)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Status)
+            @Html.ValidationMessageFor(model => model.Status)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Discription)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Discription)
+            @Html.ValidationMessageFor(model => model.Discription)
+        </div>
+
+        <p>
+            <input type="submit" value="Create" />
+        </p>
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>

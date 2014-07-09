@@ -1,0 +1,79 @@
+﻿@model EadProject.Models.Employee
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>Employee</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.EmpId)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.EmpId)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.EmpName)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.EmpName)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.ManagerNo)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.ManagerNo)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Job)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Job)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.H_date)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.H_date)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.L_date)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.L_date)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Salary)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Salary)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Commision)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Commision)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Project.ProjectName)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Project.ProjectName)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { /* id=Model.PrimaryKey */ }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

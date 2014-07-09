@@ -1,0 +1,81 @@
+@model IEnumerable<EadProject.Models.Annoucement>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Search By Date</h2>
+<p>formate:mm/dd/yyyy</p>
+<form method="post" action="/Annoucement/Searchbydate">
+<input type="text" name="t1">
+    <br>
+    <input type="submit" value="Search">
+</form>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+@*<table>
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Statement)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Date)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Project.ProjectName)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Statement)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Date)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Project.ProjectName)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |
+            @Html.ActionLink("Details", "Details", new { id=item.Id }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.Id })
+        </td>
+    </tr>
+}
+
+</table>*@
+
+  <div id="container">
+      <div class="ja-typo-legend legend-rounded legend-1">
+          <p><strong>Annoucements</strong></p>
+          <table>
+<tbody>
+@foreach(var v in Model)
+{ 
+<tr>
+<td align="center"><img src="~/Images/avatar.gif" border="0" alt="" /></td>
+    <td>
+<p align="left">
+    <p><strong>Statement</strong></p>
+<p>@v.Statement</p>
+    <p><strong>Date</strong></p>
+<p>@v.Date</p>
+    <p><strong>Under Project</strong></p>
+<p>@v.ProjectId</p>
+        @Html.ActionLink("Edit", "Edit", new { id=v.Id }) |
+            @Html.ActionLink("Details", "Details", new { id=v.Id }) |
+            @Html.ActionLink("Delete", "Delete", new { id=v.Id })
+<p>__________________________________________________________________________________________________________________</p>
+    </td>
+</tr>
+}
+</tbody>
+</table>
+</div>
+      </div>

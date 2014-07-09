@@ -1,0 +1,42 @@
+﻿@{
+    ViewBag.Title = "Search";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<html>
+    <body>
+        <table>
+            <tr>
+                <td>ID</td>
+                <td>Name</td>
+                <td>Job</td>
+                <td>Manager NO</td>
+                <td>Salary</td>
+                <td>Heigher Date</td>
+                <td>Leaving Date</td>
+                <td>Project</td>
+                <td>Commision</td>
+            </tr>
+
+                @foreach (var v in ViewBag.Project)
+                {
+                    <tr>
+                    <td>@v.EmpId</td>
+                    <td>@v.EmpName</td>
+                    <td>@v.Job</td>
+                    <td>@v.ManagerNo</td>
+                    <td>@v.Salary</td>
+                    <td>@v.H_date</td>
+                    <td>@v.L_date</td>
+                    <td>@v.ProjectId</td>
+                    <td>@v.Commision</td>
+                    <td>
+                        @Html.ActionLink("Edit", "Edit", new {  id=v.EmpId  })
+                        @Html.ActionLink("Details", "Details", new {  id=v.EmpId  }) |
+                        @Html.ActionLink("Delete", "Delete", new {  id=v.EmpId  })
+                    </td> 
+                    </tr>
+                }
+            @Html.ActionLink("Back to List", "Index")
+        </table>
+    </body>
+</html>

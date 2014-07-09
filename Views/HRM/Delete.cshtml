@@ -1,0 +1,82 @@
+﻿@model EadProject.Models.Employee
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<fieldset>
+    <legend>Employee</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.EmpId)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.EmpId)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.EmpName)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.EmpName)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.ManagerNo)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.ManagerNo)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Job)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Job)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.H_date)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.H_date)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.L_date)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.L_date)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Salary)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Salary)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Commision)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Commision)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Project.ProjectName)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Project.ProjectName)
+    </div>
+</fieldset>
+@using (Html.BeginForm()) {
+    <p>
+        <input type="submit" value="Delete" /> |
+        @Html.ActionLink("Back to List", "Index")
+    </p>
+}
